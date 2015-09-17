@@ -5,7 +5,7 @@
 ```javascript
 var MyApp = angular.module('YOUR_APP_NAME', []);
 
-MyApp.filter('formatSecondsToMMSS', function () {
+MyApp.filter('FILTER_NAME', function () {
     return function (timeInSeconds) {
         if (isNaN(timeInSeconds) === false) {
             var s, m, h;
@@ -36,4 +36,12 @@ MyApp.filter('formatSecondsToMMSS', function () {
         return (n < 10 ? "0"+n : n);
     }
 })
+```
+To use it..
+
+in your html view
+```javascript
+<div>{{3600 | FILTER_NAME }}</div> // gives 01:00:00
+
+<div>{{150 | FILTER_NAME }}</div> // gives 2:30
 ```
