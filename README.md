@@ -2,6 +2,7 @@
  angularjs date filter example!
 
 
+```javascript
 var MyApp = angular.module('YOUR_APP_NAME', []);
 
 MyApp.filter('formatSecondsToMMSS', function () {
@@ -35,3 +36,4 @@ MyApp.filter('formatSecondsToMMSS', function () {
         return (n < 10 ? "0"+n : n);
     }
 })
+```
